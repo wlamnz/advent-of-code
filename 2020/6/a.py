@@ -8,7 +8,7 @@ yes_set = set()
 count = 0
 for line in lines:
     if line != "":
-        for c in line.strip():
+        for c in line:
             yes_set.add(c)
     else:
         count += len(yes_set) 

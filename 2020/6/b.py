@@ -10,7 +10,7 @@ total_in_group = 0
 for line in lines:
     if line != "":
         total_in_group += 1
-        for c in line.strip():
+        for c in line:
             if c not in yes_dict:
                 yes_dict[c] = []
 

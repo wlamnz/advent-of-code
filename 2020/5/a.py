@@ -4,19 +4,17 @@ def get_seat_id(boarding_pass):
     ri, rj = 0, 127
     ci, cj = 0, 7
 
-    for l in boarding_pass[:-3]:
-        m = (ri + rj) // 2
+    for l in boarding_pass:
+        m1 = (ri + rj) // 2
+        m2 = (ci + cj) // 2
         if l == "F":
-            rj = m
+            rj = m1
         elif l == "B":
-            ri = m + 1
-
-    for l in boarding_pass[-3:]:
-        m = (ci + cj) // 2
-        if l == "L":
-            cj = m
+            ri = m1 + 1
+        elif l == "L":
+            cj = m2
         elif l == "R":
-            ci = m + 1
+            ci = m2 + 1
 
     return ri * 8 + ci
 
