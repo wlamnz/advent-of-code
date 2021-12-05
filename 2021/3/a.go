@@ -45,7 +45,6 @@ func main() {
 		}
 	}
 
-	// TIL: Go doesn't have ~, so we need to do mask ^ v to achieve the same behaviour (i.e. 0011 ^ 1111 = 1100) :(
 	epsilonRate := gammaRate ^ mask
 
 	fmt.Println(gammaRate * epsilonRate)
