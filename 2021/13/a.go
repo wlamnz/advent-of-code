@@ -59,7 +59,7 @@ func main() {
 
 func foldY(paper map[Coord]bool, y int) map[Coord]bool {
 	newPaper := make(map[Coord]bool)
-	for k, _ := range paper {
+	for k := range paper {
 		if k.Y < y {
 			newPaper[k] = true
 		} else {
@@ -73,7 +73,7 @@ func foldY(paper map[Coord]bool, y int) map[Coord]bool {
 
 func foldX(paper map[Coord]bool, x int) map[Coord]bool {
 	newPaper := make(map[Coord]bool)
-	for k, _ := range paper {
+	for k := range paper {
 		if k.X < x {
 			newPaper[k] = true
 		} else {
@@ -89,7 +89,7 @@ func draw(paper map[Coord]bool) {
 	maxY := 0
 	maxX := 0
 
-	for k, _ := range paper {
+	for k := range paper {
 		y := k.Y
 		x := k.X
 
